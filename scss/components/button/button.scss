@@ -1,0 +1,20 @@
+@use './../../base/variables' as style;
+
+@mixin button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: style.$white;
+    background-color: style.$main-red;
+    border: none;
+    border-radius: 211px;
+    padding: 20px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: style.$light-blue;
+        color: style.$black
+    }
+}
