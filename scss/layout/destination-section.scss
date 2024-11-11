@@ -14,8 +14,13 @@
     background-image: url('./../../src/images/beach.png');
     background-position: center;
     background-size: cover;
-    background-repeat: none;
+    background-repeat: no-repeat;
     z-index: 0;
+
+    @media  (max-width: 768px) {
+        padding: 6rem 0 6rem 0;
+        gap: 5rem;
+    }   
 
     &::before {
         content: '';
@@ -24,7 +29,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: style.$midhight-navy;
+        background-color: rgba(style.$midhight-navy, 0.9);
         opacity: 0.9;
         background-repeat: no-repeat;
         background-position: center;
@@ -40,10 +45,19 @@
         gap: 7rem;
         z-index: 1;
 
+        @media  (max-width: 768px) {
+           flex-direction: column;
+           gap: 2.5rem;
+        }   
+
         .destination-section__content {
             display: flex;
             flex-direction: column;
             max-width: 480px;
+
+            @media  (max-width: 768px) {
+                align-items: center;
+            }   
 
             .destination-section__block-title {
                 @include fonts.dm-normal;
@@ -64,15 +78,25 @@
                 height: 50px;
                 letter-spacing: 1px;
                 text-align: center;
+                padding: 0;
                 @include fonts.dm-normal;
+
+                @media  (max-width: 768px) {
+                    width: 100%;
+                }   
             }
+
         }
 
     }
 
     .destination-section__block--reverse {
-        flex-direction: row-reverse !important;
+        flex-direction: row-reverse;
         z-index: 1;
+
+        @media  (max-width: 768px) {
+            flex-direction: column;
+        }   
 
     }
 }

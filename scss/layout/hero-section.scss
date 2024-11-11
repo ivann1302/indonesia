@@ -81,7 +81,7 @@ body {
             align-items: center;
             margin: 0;
             width: auto;
-            gap: 0
+            gap: 0;
         }
 
         .hero-section__title {
@@ -108,6 +108,11 @@ body {
                 letter-spacing: 1px;
                 text-align: center;
                 @include fonts.dm-normal;
+
+                @media  (max-width: 768px) {
+                    height: auto;
+                    width: 100%;
+                }   
             }
         }
 
@@ -124,13 +129,14 @@ body {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(0, 0, 0, 0.5); // Полупрозрачный фон
+                background-color: rgba(0, 0, 0, 0.5);
                 z-index: 1;
             }
 
             @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
+            margin-bottom: 3rem;
             }
 
             .hero-section__content-item {
@@ -171,8 +177,6 @@ body {
                 @media (max-width: 768px) {
                     width: 100%;
                     height: max-content;
-
-
                     }
 
                 iframe {
@@ -185,6 +189,7 @@ body {
 
                     @media (max-width: 768px) {
                         position: static;
+                        height: 18rem;
                     }
                 }
             }
