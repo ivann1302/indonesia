@@ -1,0 +1,117 @@
+@use './../base/typography.scss' as fonts;
+@use './../base/_variables.scss' as style;
+@use './../components/slider/slider.scss';
+
+.explore-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+
+
+    background-image: url('./../../src/images/explore.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .slider-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 2207px;
+        padding-top: 11rem;
+
+        .slider-block__title {
+            @include fonts.dm-normal;
+            color: style.$midhight-navy;
+            font-size: 2.8rem;
+            text-align: center;
+        }
+    }
+
+    .numbers-block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: 794px;
+        padding-bottom: 12rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(style.$midhight-navy, 0.9);
+            opacity: 0.9;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .numbers-block__main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            z-index: 1;
+            padding-top: 11rem;
+
+            .numbers-block__title {
+                @include fonts.dm-normal;
+                color: style.$white;
+                font-size: 3.3rem;
+            }
+
+            .numbers-block__text {
+                @include fonts.dm-thin;
+                color: style.$gray;
+                font-size: 1rem;
+                text-align: center;
+                max-width: 484px;
+            }
+         }
+
+        .numbers-block__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6rem;
+            z-index: 1;
+        }
+
+        .numbers-block__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            .numbers-block__item-title {
+                @include fonts.dm-normal;
+                color: style.$main-red;
+                font-size: 2.3rem;
+            }
+
+            .numbers-block__item-text {
+                @include fonts.dm-thin;
+                color: style.$gray;
+                font-size: 1rem;
+                text-align: center;
+                max-width: 20rem;   
+            }
+        }
+    }
+}
