@@ -1,6 +1,6 @@
 @use './../base/typography.scss' as fonts;
 @use './../base/_variables.scss' as style;
-@use './../components/slider/slider.scss';
+@use './../components/slider/slider.scss' as slider;
 
 .explore-section {
     display: flex;
@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: start;
 
         width: 100%;
         height: 2207px;
@@ -30,6 +30,11 @@
             color: style.$midhight-navy;
             font-size: 2.8rem;
             text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .slider {
+            @include slider.slider;
         }
     }
 
