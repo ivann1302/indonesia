@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-
+    width
 
     .slider__container {
         display: flex;
@@ -59,7 +59,15 @@
                 .slider__item__image {
                     height: 100%;
                 }
+
+                @media(max-width: 768px) {
+                    max-width: 100%;
+                }
             }
+            @media(max-width: 758px) {
+                width: 22.5rem; 
+            }
+
         }
 
     }
@@ -88,4 +96,15 @@
             cursor: pointer;    
         }
     }
+
+    @media(max-width: 768px) {
+        .slider__container { 
+        gap: 0.2rem;
+        display: flex;
+        }
+    }
+
 }
+
+
+

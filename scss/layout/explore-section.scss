@@ -25,12 +25,22 @@
         height: 2207px;
         padding-top: 11rem;
 
+        @media(max-width: 768px) {
+            padding-top: 3rem;
+        }
+        
+
         .slider-block__title {
             @include fonts.dm-normal;
             color: style.$midhight-navy;
             font-size: 2.8rem;
             text-align: center;
             padding-bottom: 2rem;
+
+            @media(max-width: 768px) {
+                width: 15rem;
+                font-size: 2.3rem;
+            }
         }
 
         .slider {
@@ -72,6 +82,7 @@
             gap: 2rem;
             z-index: 1;
             padding-top: 11rem;
+
 
             .numbers-block__title {
                 @include fonts.dm-normal;
@@ -118,5 +129,16 @@
                 max-width: 20rem;   
             }
         }
+    }
+}
+
+@media(max-width: 768) {
+    .numbers-block__main {
+        flex-direction: column;
+        padding: 11rem 0 3rem 0;
+    }
+
+    .numbers-block__item-title {
+        font-size: 2.2rem;
     }
 }
