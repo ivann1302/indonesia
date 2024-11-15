@@ -465,7 +465,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
 }
-.explore-section .slider-block .slider width .slider__container {
+.explore-section .slider-block .slider .slider__container {
   display: flex;
   gap: 30px;
 }
@@ -594,6 +594,13 @@ body {
   align-items: center;
   gap: 6rem;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .explore-section .numbers-block .numbers-block__items {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 3.5rem;
+  }
 }
 .explore-section .numbers-block .numbers-block__item {
   display: flex;
