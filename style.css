@@ -635,5 +635,89 @@ body {
     font-size: 2.2rem;
   }
 }
+.photo-section {
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+  height: 1388px;
+  width: 100%;
+}
+.photo-section .photo-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  gap: 1rem;
+}
+.photo-section .photo-section__container .photo-title {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+  font-size: 3.3rem;
+  max-width: 614px;
+}
+.photo-section .photo-section__container .photo-text {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #6F7787;
+  font-size: 1rem;
+  max-width: 470px;
+  margin: 2.3rem 0 4rem 0;
+}
+.photo-section .photo-section__container .photo-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+}
+.photo-section .photo-section__container .photo-section__grid .item1 {
+  background: url(./../../src/images/photo-gallery/Image001.png);
+  background-size: cover;
+  width: 370px;
+  height: 530px;
+}
+.photo-section .photo-section__container .photo-section__grid .item2 {
+  background: url(./../../src/images/photo-gallery/Image002.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 210px;
+}
+.photo-section .photo-section__container .photo-section__grid .item3 {
+  background: url(./../../src/images/photo-gallery/Image003.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 370px;
+}
+.photo-section .photo-section__container .photo-section__grid .item4 {
+  background: url(./../../src/images/photo-gallery/Image004.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 210px;
+}
+.photo-section .photo-section__container .photo-section__grid .item5 {
+  position: relative;
+  top: -320px;
+  background: url(./../../src/images/photo-gallery/Image005.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 530px;
+}
+.photo-section .photo-section__container .photo-section__grid .item6 {
+  position: relative;
+  top: -160px;
+  background: url(./../../src/images/photo-gallery/Image006.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 370px;
+}
 
 /*# sourceMappingURL=style.css.map */
