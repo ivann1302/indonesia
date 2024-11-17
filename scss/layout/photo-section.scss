@@ -9,6 +9,11 @@
     height: 1388px;
     width: 100%;
 
+    @media(max-width: 768px) {
+        width: auto;
+        height: 752px;
+    }
+
     .photo-section__container {
         display: flex;
         flex-direction: column;
@@ -22,6 +27,10 @@
             color: style.$black;
             font-size: 3.3rem;
             max-width: 614px;
+
+            @media(max-width: 768px) {
+                font-size: 2.3rem;
+            }
         }
 
         .photo-text {
@@ -31,19 +40,35 @@
             font-size: 1rem;
             max-width: 470px;
             margin: 2.3rem 0 4rem 0;
+
+            @media(max-width: 768px) {
+                max-width: 320px;
+                margin: 1rem 0 1rem 0;
+            }
         }
 
         .photo-section__grid {
             display: grid;
             grid-template-columns: repeat(3, 370px);
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             gap: 30px;
+
+            @media(max-width: 768px) {
+                gap: 0.3rem;
+                grid-template-columns: 151px 151px;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
 
             .item1 {
                 background: url(./../../src/images/photo-gallery/Image001.png);
                 background-size: cover; 
                 width: 370px;
                 height: 530px;
+
+                @media(max-width: 768px) {
+                    width: 151px;
+                    height: 217px;
+                }
             };
 
             .item2 {
@@ -52,6 +77,11 @@
                 background-repeat: no-repeat;
                 width: 370px;
                 height: 210px;
+
+                @media(max-width: 768px) {
+                    width: 151px;
+                    height: 86px;
+                }
             }
 
             .item3 {
@@ -60,6 +90,11 @@
                 background-repeat: no-repeat;
                 width: 370px;
                 height: 370px;
+
+                @media(max-width: 768px) {
+                    width: 151px;
+                    height: 86px;
+                }
             }
 
             .item4 {
@@ -68,6 +103,13 @@
                 background-repeat: no-repeat;
                 width: 370px;
                 height: 210px;
+
+                @media(max-width: 768px) {
+                    width: 151px;
+                    height: 217px;
+                    position: relative;
+                    top: -130px;
+                }
             }   
 
             .item5 {
@@ -79,6 +121,12 @@
                 width: 370px;
                 height: 530px;
 
+                @media(max-width: 768px) {
+                    width: 151px;
+                    height: 153px;
+                    top: -131px;
+                }
+
             }
 
             .item6 {
@@ -89,6 +137,12 @@
                 background-repeat: no-repeat;
                 width: 370px;
                 height: 370px;
+
+                @media(max-width: 768px) {
+                    width: 151px;
+                    height: 153px;
+                    top: -131px;
+                }
             }
         }
     }
