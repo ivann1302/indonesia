@@ -45,6 +45,13 @@
         gap: 7rem;
         z-index: 1;
 
+        .destination-section__image {
+            @media(max-width: 768px) {
+                max-width: 314px;
+                max-height: 232px;
+            }
+        }
+
         @media  (max-width: 768px) {
            flex-direction: column;
            gap: 2.5rem;
@@ -63,12 +70,20 @@
                 @include fonts.dm-normal;
                 color: style.$white;
                 font-size: 2.5rem;
+
+                @media(max-width: 768px) {
+                    text-align: center;
+                }
             }
 
             .destination-section__block-description {
                 @include fonts.dm-thin;
                 color: style.$gray;
                 padding:  0.2rem 0 1.8rem 0;
+
+                @media(max-width: 768px) {
+                    text-align: center;
+                }
             }
 
             .destination-section__button {

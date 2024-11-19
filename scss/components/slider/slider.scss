@@ -45,6 +45,10 @@
         justify-content: center;
         overflow: hidden;
 
+        @media(max-width: 768px) {
+            max-width: 364px;
+        }
+
         .slider__track {
             display: flex;
             gap: 31px;
