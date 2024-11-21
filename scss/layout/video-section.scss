@@ -6,10 +6,24 @@
     display: flex;
     justify-content: center;
 
-    background-image: url(./../../src/images/hugo-matilla-EFuCATqfblI-unsplash1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+        background-image: url(./../../src/images/hugo-matilla-EFuCATqfblI-unsplash1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
      z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.46);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+    
+     }
+
 
     .video-section__container {
         display: flex;
@@ -27,6 +41,11 @@
             text-align: center;
             padding-bottom: 11.5rem;
 
+            @media(max-width: 768px) {
+                padding-bottom: 0;
+                max-height: 540px;
+            }
+
             .video-section__title {
                 padding-bottom: 5rem;
                 width: 841px;
@@ -37,24 +56,26 @@
                     max-width: 314px;
                     padding-bottom: 1.5rem;
                 }
-
+            }
                 .video-section__main-video {
+                    width: 840px;
+                    height: 560px;
 
-                    iframe {
+                    .main-video__iframe {
                         width: 840px;
                         height: 560px;
                     }
-                    
+
                     @media(max-width: 768px) {
                         max-width: 314px; 
+                        height: 560px;
 
-                        iframe {
+                        .main-video__iframe {
                             width: 314px;
                             height: 192px;
                         }
                     }
                 }
-        }
     }
 
         .video-section__bottom {
@@ -66,6 +87,7 @@
             @media(max-width: 768px) {
                 flex-direction: column;
                 align-items: center;
+                gap: 2rem;
             }
 
             .video-section__bottom-block {
@@ -80,6 +102,7 @@
                     align-items: center;
                     max-width: 314px;
                     height: max-content;
+                    gap: 1rem;
                 }
 
                 .video-section__bottom-video-container {
@@ -101,7 +124,6 @@
                     gap: 1rem;
                     font-size: 1rem;
 
-
                     @media(max-width: 768px) {
                         width: 313px;
                         text-align: center;
@@ -120,6 +142,5 @@
                 
             }
         }
-
     }
 }
