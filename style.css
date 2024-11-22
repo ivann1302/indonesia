@@ -368,9 +368,9 @@ body {
   }
 }
 .destination-section .destination-section__block .destination-section__content .destination-section__block-title {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
   color: #FFFFFF;
   font-size: 2.5rem;
 }
@@ -844,7 +844,7 @@ body {
 }
 @media (max-width: 768px) {
   .video-section .video-section__container .video-section__title-block {
-    padding-bottom: 0;
+    padding-bottom: 1.5rem;
     max-height: 540px;
   }
 }
@@ -936,6 +936,152 @@ body {
   .video-section .video-section__container .video-section__bottom .video-section__bottom-block .video-section__bottom-description p {
     font-size: 0.9rem;
   }
+}
+
+.steps__section {
+  background-color: #DCE8F2;
+}
+.steps__section .steps__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  padding: 6.2rem 0 6.2rem 0;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.steps__section .steps__container .steps__title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  font-size: 3.3rem;
+  color: #010A20;
+}
+.steps__section .steps__container .steps__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.steps__section .steps__container .steps__list .steps__item {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__number-container .steps__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 3rem;
+  height: 3rem;
+  background-color: #DD2242;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  font-size: 1.3rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__number-container .steps__line {
+  flex: 1 1 auto;
+  width: 2px;
+  height: 5rem;
+  background-color: #6F7787;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__heading {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #010A20;
+  font-size: 1.5rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6F7787;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__image {
+  background-image: url("./../../src/images/moto.png");
+  background-position: center;
+  background-size: contain;
+  width: 250px;
+  height: 166px;
+  margin-bottom: 1.5rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 446px;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #010A20;
+  font-size: 1.5rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #6F7787;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__button {
+  display: none;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #DD2242;
+  border: none;
+  border-radius: 211px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+  width: 210px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__action-button:hover {
+  background-color: #DCE8F2;
+  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,142 @@
 @use './../base/typography.scss' as fonts;
 @use './../base/_variables.scss' as style;
 @use './../components/button/button.scss' as button;
+
+.steps__section {
+    background-color: style.$light-blue;
+
+    .steps__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+        padding: 6.2rem 0 6.2rem 0;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .steps__title {
+            @include fonts.dm-normal;
+            font-size: 3.3rem;
+            color: style.$dark-blue;
+        }
+
+        .steps__list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+
+            .steps__item {
+                display: flex;
+                flex-direction: row;
+                gap: 2.2rem;
+
+                .steps__number-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    .steps__number {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex: 0 0 auto;
+                        width: 3rem;
+                        height: 3rem;
+                        background-color: style.$main-red;
+                        border-radius: 50%;
+
+                        color: style.$white;
+                        @include fonts.dm-normal;
+                        font-size: 1.3rem;
+                    }
+
+                    .steps__line {
+                        flex: 1 1 auto;
+                        width: 2px;
+                        height: 5rem;
+                        background-color: style.$gray;
+                    }
+                }
+
+                .steps__content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    padding-bottom: 1.5rem;
+
+                    .steps__heading {
+                        @include fonts.dm-normal;
+                        color: style.$dark-blue;
+                        font-size: 1.5rem;
+                    }
+
+                    .steps__description {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        @include fonts.dm-thin;
+                        color: style.$gray;
+                        font-size: 1.2rem;
+                        line-height: 2rem;
+                    }
+                    .steps__image-block {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 2.5rem;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+                        .steps__image {
+                            background-image: url('./../../src/images/moto.png');
+                            background-position: center;
+                            background-size: contain ;
+                            width: 250px;
+                            height: 166px;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        .steps__description-container {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.6rem;
+                            max-width: 446px;
+
+                            .steps__image-title {
+                                @include fonts.dm-normal;
+                                color: style.$dark-blue;
+                                font-size: 1.5rem;
+                            }
+
+                            .steps__image-text {
+                                @include fonts.dm-thin;
+                                color: style.$gray;
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                            }
+                        }
+                    }
+
+                    .steps__button {
+                    display: none;
+                    }
+
+                    .steps-image-block {
+
+                    }
+
+                    .steps__action-button {
+                        @include button.button;
+                        margin-top: 1.5rem;
+                        width: 210px;
+                        @include fonts.dm-normal;
+                    }
+                }
+            }
+        }
+    }
+}
