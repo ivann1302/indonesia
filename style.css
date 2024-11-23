@@ -722,22 +722,36 @@ body {
 }
 .photo-section .photo-section__container .photo-section__grid .item1 {
   background: url(./../../src/images/photo-gallery/Image001.png);
-  background-size: cover;
   width: 370px;
   height: 530px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.photo-section .photo-section__container .photo-section__grid .item1:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .photo-section .photo-section__container .photo-section__grid .item1 {
     width: 151px;
     height: 217px;
   }
+  .photo-section .photo-section__container .photo-section__grid .item1:hover {
+    transform: scale(1);
+  }
 }
 .photo-section .photo-section__container .photo-section__grid .item2 {
   background: url(./../../src/images/photo-gallery/Image002.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 370px;
   height: 210px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.photo-section .photo-section__container .photo-section__grid .item2:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .photo-section .photo-section__container .photo-section__grid .item2 {
@@ -747,23 +761,36 @@ body {
 }
 .photo-section .photo-section__container .photo-section__grid .item3 {
   background: url(./../../src/images/photo-gallery/Image003.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 370px;
   height: 370px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.photo-section .photo-section__container .photo-section__grid .item3:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .photo-section .photo-section__container .photo-section__grid .item3 {
     width: 151px;
     height: 86px;
   }
+  .photo-section .photo-section__container .photo-section__grid .item3:hover {
+    transform: scale(1);
+  }
 }
 .photo-section .photo-section__container .photo-section__grid .item4 {
   background: url(./../../src/images/photo-gallery/Image004.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 370px;
   height: 210px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.photo-section .photo-section__container .photo-section__grid .item4:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .photo-section .photo-section__container .photo-section__grid .item4 {
@@ -772,15 +799,23 @@ body {
     position: relative;
     top: -130px;
   }
+  .photo-section .photo-section__container .photo-section__grid .item4:hover {
+    transform: scale(1);
+  }
 }
 .photo-section .photo-section__container .photo-section__grid .item5 {
   position: relative;
   top: -320px;
   background: url(./../../src/images/photo-gallery/Image005.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 370px;
   height: 530px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.photo-section .photo-section__container .photo-section__grid .item5:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .photo-section .photo-section__container .photo-section__grid .item5 {
@@ -788,21 +823,32 @@ body {
     height: 153px;
     top: -131px;
   }
+  .photo-section .photo-section__container .photo-section__grid .item5:hover {
+    transform: scale(1);
+  }
 }
 .photo-section .photo-section__container .photo-section__grid .item6 {
   position: relative;
   top: -160px;
   background: url(./../../src/images/photo-gallery/Image006.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 370px;
   height: 370px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.photo-section .photo-section__container .photo-section__grid .item6:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .photo-section .photo-section__container .photo-section__grid .item6 {
     width: 151px;
     height: 153px;
     top: -131px;
+  }
+  .photo-section .photo-section__container .photo-section__grid .item6:hover {
+    transform: scale(1);
   }
 }
 

@@ -61,22 +61,39 @@
 
             .item1 {
                 background: url(./../../src/images/photo-gallery/Image001.png);
-                background-size: cover; 
                 width: 370px;
                 height: 530px;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                overflow: hidden;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 @media(max-width: 768px) {
                     width: 151px;
                     height: 217px;
+
+                    &:hover {
+                        transform: scale(1.0)
+                    }
                 }
             };
 
             .item2 {
                 background: url(./../../src/images/photo-gallery/Image002.png);
-                background-size: cover;
-                background-repeat: no-repeat;
                 width: 370px;
                 height: 210px;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                overflow: hidden;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 @media(max-width: 768px) {
                     width: 151px;
@@ -86,29 +103,49 @@
 
             .item3 {
                 background: url(./../../src/images/photo-gallery/Image003.png);
-                background-size: cover;
-                background-repeat: no-repeat;
                 width: 370px;
                 height: 370px;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                overflow: hidden;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 @media(max-width: 768px) {
                     width: 151px;
                     height: 86px;
+
+                    &:hover {
+                        transform: scale(1.0);
+                    }
                 }
             }
 
             .item4 {
                 background: url(./../../src/images/photo-gallery/Image004.png);
-                background-size: cover;
-                background-repeat: no-repeat;
                 width: 370px;
                 height: 210px;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                overflow: hidden;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 @media(max-width: 768px) {
                     width: 151px;
                     height: 217px;
                     position: relative;
                     top: -130px;
+
+                    &:hover {
+                        transform: scale(1.0);
+                    }
                 }
             }   
 
@@ -116,15 +153,25 @@
                 position: relative;
                 top: -320px;
                 background: url(./../../src/images/photo-gallery/Image005.png);
-                background-size: cover;
-                background-repeat: no-repeat;
                 width: 370px;
                 height: 530px;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                overflow: hidden;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 @media(max-width: 768px) {
                     width: 151px;
                     height: 153px;
                     top: -131px;
+
+                    &:hover {
+                        transform: scale(1.0);
+                    }
                 }
 
             }
@@ -133,15 +180,25 @@
                 position: relative;
                 top: -160px;
                 background: url(./../../src/images/photo-gallery/Image006.png);
-                background-size: cover;
-                background-repeat: no-repeat;
                 width: 370px;
                 height: 370px;
+                background-size: cover; 
+                background-repeat: no-repeat;
+                overflow: hidden;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                    transform: scale(1.07);
+                }
 
                 @media(max-width: 768px) {
                     width: 151px;
                     height: 153px;
                     top: -131px;
+
+                    &:hover {
+                        transform: scale(1.0);
+                    }
                 }
             }
         }
