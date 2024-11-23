@@ -953,6 +953,8 @@ body {
   .steps__section .steps__container {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+    padding: 1.6rem 0 3rem 0;
   }
 }
 .steps__section .steps__container .steps__title {
@@ -967,24 +969,39 @@ body {
   flex-direction: column;
   gap: 0;
 }
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list {
+    align-items: center;
+    gap: 1.7rem;
+  }
+}
 .steps__section .steps__container .steps__list .steps__item {
   display: flex;
   flex-direction: row;
   gap: 2.2rem;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item {
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 .steps__section .steps__container .steps__list .steps__item .steps__number-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  width: 3.3rem;
+  height: auto;
 }
 .steps__section .steps__container .steps__list .steps__item .steps__number-container .steps__number {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: 3rem;
-  height: 3rem;
+  width: 3.3rem;
+  height: 3.3rem;
   background-color: #DD2242;
   border-radius: 50%;
   color: #FFFFFF;
@@ -999,11 +1016,22 @@ body {
   height: 5rem;
   background-color: #6F7787;
 }
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__number-container .steps__line {
+    display: none;
+  }
+}
 .steps__section .steps__container .steps__list .steps__item .steps__content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content {
+    align-items: center;
+    gap: 0.3rem;
+  }
 }
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__heading {
   font-family: "DM Sans", sans-serif;
@@ -1023,12 +1051,29 @@ body {
   font-size: 1.2rem;
   line-height: 2rem;
 }
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__description {
+    display: block;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block {
   display: flex;
   flex-direction: row;
   gap: 2.5rem;
   align-items: flex-start;
   justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5rem;
+  }
 }
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__image {
   background-image: url("./../../src/images/moto.png");
@@ -1044,12 +1089,22 @@ body {
   gap: 0.6rem;
   max-width: 446px;
 }
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container {
+    text-align: center;
+  }
+}
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-title {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #010A20;
   font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-title {
+    text-align: center;
+  }
 }
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-text {
   font-family: "DM Sans", sans-serif;
@@ -1059,8 +1114,35 @@ body {
   font-size: 1.2rem;
   line-height: 2rem;
 }
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-text {
+    display: block;
+    width: 314px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__button {
   display: none;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__button {
+    display: flex;
+    width: max-content;
+    padding-top: 0.4rem;
+    color: #DD2242;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+  }
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__button:hover {
+    text-decoration: underline;
+  }
 }
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__action-button {
   display: flex;
@@ -1082,6 +1164,11 @@ body {
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__action-button:hover {
   background-color: #DCE8F2;
   color: #000;
+}
+@media (max-width: 768px) {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__action-button {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,6 +16,8 @@
         @media(max-width: 768px) {
             flex-direction: column;
             gap: 2rem;
+            align-items: center;
+            padding: 1.6rem 0 3rem 0;
         }
 
         .steps__title {
@@ -29,27 +31,39 @@
             flex-direction: column;
             gap: 0;
 
+            @media(max-width: 768px) {
+                align-items: center;
+                gap: 1.7rem;
+            }
+
             .steps__item {
                 display: flex;
                 flex-direction: row;
                 gap: 2.2rem;
+
+                @media(max-width: 768px) {
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                }
 
                 .steps__number-container {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: flex-start;
+                    width: 3.3rem;
+                    height: auto;
 
                     .steps__number {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         flex: 0 0 auto;
-                        width: 3rem;
-                        height: 3rem;
+                        width: 3.3rem;
+                        height: 3.3rem;
                         background-color: style.$main-red;
                         border-radius: 50%;
-
                         color: style.$white;
                         @include fonts.dm-normal;
                         font-size: 1.3rem;
@@ -60,6 +74,10 @@
                         width: 2px;
                         height: 5rem;
                         background-color: style.$gray;
+
+                        @media(max-width: 768px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -68,6 +86,11 @@
                     flex-direction: column;
                     gap: 1.5rem;
                     padding-bottom: 1.5rem;
+
+                    @media(max-width: 768px) {
+                        align-items: center;
+                        gap: 0.3rem;
+                    }
 
                     .steps__heading {
                         @include fonts.dm-normal;
@@ -83,6 +106,15 @@
                         color: style.$gray;
                         font-size: 1.2rem;
                         line-height: 2rem;
+
+                        @media(max-width: 768px) {
+                            display: block;
+                            width: 250px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: center;
+                        }
                     }
                     .steps__image-block {
                         display: flex;
@@ -90,6 +122,12 @@
                         gap: 2.5rem;
                         align-items: flex-start;
                         justify-content: flex-start;
+
+                         @media(max-width: 768px) {
+                            flex-direction: column;
+                            align-items: center;
+                            padding-top: 1.5rem;
+                        }
 
                         .steps__image {
                             background-image: url('./../../src/images/moto.png');
@@ -106,10 +144,18 @@
                             gap: 0.6rem;
                             max-width: 446px;
 
+                            @media(max-width: 768px) {
+                                text-align: center;
+                            }
+
                             .steps__image-title {
                                 @include fonts.dm-normal;
                                 color: style.$dark-blue;
                                 font-size: 1.5rem;
+
+                                @media(max-width: 768px) {
+                                    text-align: center;
+                                }
                             }
 
                             .steps__image-text {
@@ -117,16 +163,36 @@
                                 color: style.$gray;
                                 font-size: 1.2rem;
                                 line-height: 2rem;
+
+                                @media(max-width: 768px) {
+                                    display: block;
+                                    width: 314px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-align: center;
+                                }
                             }
                         }
                     }
 
                     .steps__button {
                     display: none;
-                    }
 
-                    .steps-image-block {
+                        @media(max-width: 768px) {
+                            display: flex;
+                            width: max-content;
+                            padding-top: 0.4rem;
+                            color: style.$main-red;
+                            @include fonts.dm-thin;
+                            font-size: 1rem;
+                            background: none;
+                            border: none;
 
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
 
                     .steps__action-button {
@@ -134,6 +200,10 @@
                         margin-top: 1.5rem;
                         width: 210px;
                         @include fonts.dm-normal;
+                        
+                        @media(max-width: 768px) {
+                            display: none;
+                        }
                     }
                 }
             }
