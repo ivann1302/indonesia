@@ -8,7 +8,7 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__container">
         <div class="header__logo">
           <img class="header__logo-icon" src="./src/images/icons/flower.svg" alt="flower">
@@ -16,10 +16,10 @@
         </div>
         <nav class="header__navigation">
           <div class="header__links">
-            <a class="header__link" href="#">destinations</a>
-            <a class="header__link" href="#">experiences</a>
-            <a class="header__link" href="#">about</a>
-            <a class="header__link" href="#">gallery</a>
+            <a class="header__link" href="#destination">destinations</a>
+            <a class="header__link" href="#experiences">experiences</a>
+            <a class="header__link" href="#about">about</a>
+            <a class="header__link" href="#gallery">gallery</a>
           </div>
           <div class="header__buttons">
             <button class="header__button">
@@ -74,7 +74,7 @@
       </div>
     </section>
 
-    <section class="destination-section">
+    <section class="destination-section" id="destination">
       <div class="destination-section__block">
         <img  class="destination-section__image" src="./src/images/row.png" alt="">
         <div class="destination-section__content">
@@ -94,7 +94,7 @@
       </div>
     </section>
     
-    <section class="explore-section">
+    <section class="explore-section" id="experiences">
       <div class="slider-block">
         <h3 class="slider-block__title">Explore Our Secrets</h3>
         <div class="slider">
@@ -158,7 +158,7 @@
       </div>
     </section>
 
-    <section class="photo-section">
+    <section class="photo-section" id="gallery">
       <div class="photo-section__container">
         <h3 class="photo-title">Photo Gallery</h3>
         <p class="photo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.</p>
@@ -179,7 +179,7 @@
       </div>
     </section>
 
-    <section class="video-section">
+    <section class="video-section" id="about">
       <div class="video-section__container">
         <div class="video-section__title-block">
           <h3 class="video-section__title">Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h3>
@@ -277,7 +277,7 @@
     <footer class="footer">
       <div class="footer-container">
         <button class="footer__up-button">
-          <a href="#">
+          <a href="#header" id="back-to-top">
             <img src="./src/images/icons/footer-icons/upArrow.svg" alt="">
           </a>
         </button>
@@ -322,6 +322,14 @@
       </div>
     </footer>    
 
+    <!-- 
+    сделать перенос вначало
+    раскрытие текста при нажатии на шоу мо
+    сделать раскрыващееся меню поиска и бургер меню
+    сделать слайдер
+    вынести бренд в компонент
+
+    -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>

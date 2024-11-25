@@ -1,6 +1,6 @@
 @use './../base/reset';
 @use './../base/typography' as fonts;
-@use './../base/_variables.scss' as var;
+@use './../base/_variables.scss' as style;
 
 .header {
     width: 100%;
@@ -23,7 +23,7 @@
     
             .header__logo-name {
                 text-transform: uppercase;
-                color: var.$white;
+                color: style.$white;
                 @include fonts.roboto-bold;
             }   
         }
@@ -45,7 +45,13 @@
                     text-decoration: none;
                     text-transform: uppercase;
                     @include fonts.dm-normal;
-                    color: var.$white;
+                    color: style.$white;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: style.$main-red;
+                        text-decoration: underline;
+                    }
                 }
             }
     

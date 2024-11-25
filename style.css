@@ -67,6 +67,11 @@ html h1 {
   font-weight: 700;
   font-size: 1rem;
   color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+.header .header__container .header__navigation .header__links a:hover {
+  color: #DD2242;
+  text-decoration: underline;
 }
 .header .header__container .header__navigation .header__buttons {
   display: flex;
@@ -315,7 +320,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 0;
 }
 @media (max-width: 768px) {
   .destination-section {
@@ -344,6 +348,14 @@ body {
   justify-content: space-between;
   gap: 7rem;
   z-index: 1;
+}
+.destination-section .destination-section__block .destination-section__image {
+  z-index: 0;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+.destination-section .destination-section__block .destination-section__image:hover {
+  transform: scale(1.07);
 }
 @media (max-width: 768px) {
   .destination-section .destination-section__block .destination-section__image {
