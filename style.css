@@ -106,7 +106,7 @@ html h1 {
   color: #FFFFFF;
 }
 .header .header__container .header__navigation .header__buttons .header__buttons__search input[type=text]:focus {
-  width: 10rem;
+  width: 12rem;
   z-index: 1;
   border-bottom: 1px solid #FFFFFF;
   color: #FFFFFF;
