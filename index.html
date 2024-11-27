@@ -22,9 +22,12 @@
             <a class="header__link" href="#gallery">gallery</a>
           </div>
           <div class="header__buttons">
-            <button class="header__button">
-              <img class="header__icon" src="./src/images/icons/search.svg" alt="search">
-            </button>
+            <div class="header__buttons__search">
+              <form action="" autocomplete="on">
+                <input id="search"  name="search" type="text" placeholder="What're we looking for?">
+                <input id="search__submit" value="searher" type="submit">
+              </form>
+            </div>
             <button class="header__button">
               <img class="header__icon" src="./src/images/icons/Vector.svg" alt="menu">
             </button>
@@ -323,7 +326,6 @@
     </footer>    
 
     <!-- 
-    сделать перенос вначало
     раскрытие текста при нажатии на шоу мо
     сделать раскрыващееся меню поиска и бургер меню
     сделать слайдер

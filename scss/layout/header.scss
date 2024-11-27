@@ -60,7 +60,70 @@
                 flex-direction: row;
                 justify-content: space-between;
                 gap: 2.5rem;
-    
+
+                .header__buttons__search {
+                display: inline-block;
+                position: relative;
+                float: right;
+                padding: 0;    
+                
+
+                input[type="text"] {
+                    height: 2.2rem;
+                    font-size: 1rem;
+                    display: inline-block;
+                    border: none;
+                    outline: none;
+                    padding-right: 2rem;
+                    width: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: none;
+                    z-index: 3;
+                    transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+                    cursor: pointer;
+                    color: style.$white;
+
+
+                    &::placeholder {
+                        color: style.$white;
+                    }
+
+                    &:focus {
+                        width: 10rem;
+                        z-index: 1;
+                        border-bottom: 1px solid style.$white;
+                        color: style.$white; 
+                    }
+
+                    &:focus:hover {
+                       border-bottom: 1px solid style.$gray; 
+                    }
+                }
+
+                input[type="submit"] {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    display: inline-block;
+                    float: right;
+                    background: url(./../../src/images/icons/search.svg);
+                    text-indent: -1000px;
+                    border: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 2;
+                    cursor: pointer;
+                    opacity: 1;
+                    transition: opacity 0.4s ease;
+
+                    &:hover {
+                        color: style.$gray;
+                    }
+                }
+            }   
+
                 .header__button {
                     background: none;
                     border: none;

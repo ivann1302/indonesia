@@ -79,6 +79,60 @@ html h1 {
   justify-content: space-between;
   gap: 2.5rem;
 }
+.header .header__container .header__navigation .header__buttons .header__buttons__search {
+  display: inline-block;
+  position: relative;
+  float: right;
+  padding: 0;
+}
+.header .header__container .header__navigation .header__buttons .header__buttons__search input[type=text] {
+  height: 2.2rem;
+  font-size: 1rem;
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding-right: 2rem;
+  width: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.header .header__container .header__navigation .header__buttons .header__buttons__search input[type=text]::placeholder {
+  color: #FFFFFF;
+}
+.header .header__container .header__navigation .header__buttons .header__buttons__search input[type=text]:focus {
+  width: 10rem;
+  z-index: 1;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+.header .header__container .header__navigation .header__buttons .header__buttons__search input[type=text]:focus:hover {
+  border-bottom: 1px solid #6F7787;
+}
+.header .header__container .header__navigation .header__buttons .header__buttons__search input[type=submit] {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+  float: right;
+  background: url(./../../src/images/icons/search.svg);
+  text-indent: -1000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+.header .header__container .header__navigation .header__buttons .header__buttons__search input[type=submit]:hover {
+  color: #6F7787;
+}
 .header .header__container .header__navigation .header__buttons .header__button {
   background: none;
   border: none;
