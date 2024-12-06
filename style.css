@@ -1185,8 +1185,14 @@ body {
     width: 250px;
     white-space: nowrap;
     overflow: hidden;
+    transition: height;
     text-overflow: ellipsis;
     text-align: center;
+  }
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__description.show {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
   }
 }
 .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block {
@@ -1211,18 +1217,18 @@ body {
   height: 166px;
   margin-bottom: 1.5rem;
 }
-.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container {
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__content {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   max-width: 446px;
 }
 @media (max-width: 768px) {
-  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__content {
     text-align: center;
   }
 }
-.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-title {
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__content .steps__heading {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -1230,11 +1236,11 @@ body {
   font-size: 1.5rem;
 }
 @media (max-width: 768px) {
-  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-title {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__content .steps__heading {
     text-align: center;
   }
 }
-.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-text {
+.steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__content .steps__description {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -1243,7 +1249,7 @@ body {
   line-height: 2rem;
 }
 @media (max-width: 768px) {
-  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__description-container .steps__image-text {
+  .steps__section .steps__container .steps__list .steps__item .steps__content .steps__image-block .steps__content .steps__description {
     display: block;
     width: 314px;
     white-space: nowrap;
