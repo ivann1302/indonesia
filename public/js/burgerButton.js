@@ -1,4 +1,4 @@
-const burger = document.querySelector('.header__burger');
+const burger = document.querySelector('.header__burger-menu');
 
  burger.addEventListener('click', () => {
     burger.classList.toggle('active');

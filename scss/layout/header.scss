@@ -128,7 +128,9 @@
                 position: absolute;
                 visibility: hidden;
               }
+              
               .burger {
+                z-index: 1;
                 cursor: pointer;
                 display: block;
                 position: relative;
@@ -137,6 +139,7 @@
                 width: 40px;
                 height: 26px;
               }
+              
               .burger::before,
               .burger::after {
                 content: '';
@@ -148,29 +151,74 @@
                 border-radius: 10px;
                 background: style.$white;
                 opacity: 0.8;
+                transition: all 0.3s;
               }
+              
               .burger::before {
                 top: 0;
                 box-shadow: 0 11px 0 style.$white;
                 transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
               }
+              
               .burger::after {
                 bottom: 0;
                 transition: bottom .3s .15s, transform .3s;
               }
+              
               .burger-checkbox:checked + .burger::before {
                 top: 11px;
                 transform: rotate(45deg);
-                box-shadow: 0 6px 0 rgba(0,0,0,0);
+                box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
                 transition: box-shadow .15s, top .3s, transform .3s .15s;
               }
+              
               .burger-checkbox:checked + .burger::after {
                 bottom: 11px;
                 transform: rotate(-45deg);
                 transition: bottom .3s, transform .3s .15s;
               }
-
-            }
+              
+              .burger-menu__list {
+                position: absolute;
+                top: 3.7rem;
+                right: -8.4rem;
+                display: grid;
+                gap: 0.8rem;
+                padding: 2.5rem;
+                background-color: style.$black;  // Если $black определена
+                opacity: 0.5;
+                list-style-type: none;
+                transform: translateX(-100%);
+                transition: .3s;
+                width: 11rem;
+              
+                @media (max-width: 768px) {
+                  top: -1rem;
+                  right: -16rem;
+                  background-color: style.$main-red;  // Если $main-red определена
+                  color: style.$white;
+                  opacity: 1;
+                }
+              
+                // Использование :checked для отображения меню
+                .burger-checkbox:checked ~ & {
+                  transform: translateX(0);
+                }
+              }
+              
+              .burger-menu__item {
+                display: block;
+                padding: 0.5rem;
+                color: style.$white;  // Если $white определена
+                font-size: 1rem;
+                text-align: center;
+                text-decoration: none;
+              
+                &:hover {
+                  background-color: rgba(255, 255, 255, 0.2);
+                }
+              }
+            } 
         }
     }
 
