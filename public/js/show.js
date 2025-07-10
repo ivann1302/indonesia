@@ -1,7 +1,9 @@
 const buttons = document.querySelectorAll('.steps__button');
 
-buttons.forEach(button => {
+if (buttons.length > 0) {
+  buttons.forEach(button => {
     button.addEventListener('click', function () {
+      try {
         // Находим ближайший родительский контейнер .steps__content
         const parentContent = this.closest('.steps__content');
         
@@ -9,15 +11,21 @@ buttons.forEach(button => {
         const text = parentContent?.querySelector('.steps__description');
 
         if (text) {
-            // Переключаем класс `show` для отображения полного текста
-            text.classList.toggle('show');
+          // Переключаем класс `show` для отображения полного текста
+          text.classList.toggle('show');
 
-            // Меняем текст кнопки
-            this.textContent = text.classList.contains('show') ? 'Show Less' : 'Show More';
+          // Меняем текст кнопки
+          this.textContent = text.classList.contains('show') ? 'Show Less' : 'Show More';
         } else {
-            console.warn('No .steps__description found for this button');
+          console.warn('Show: Элемент .steps__description не найден для этой кнопки');
         }
+      } catch (error) {
+        console.error('Show: Ошибка при переключении текста:', error);
+      }
     });
-});
+  });
+} else {
+  console.warn('Show: Элементы .steps__button не найдены');
+}
 
 export default buttons;

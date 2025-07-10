@@ -1,6 +1,6 @@
 @use './base/typography';
 @use './base/reset';
-@use  './../scss/base/variables';
+@use './base/variables';
 @use './layout/header.scss';
 @use './layout/hero-section.scss';
 @use './layout/destination-section.scss';
@@ -9,3 +9,4 @@
 @use './layout/video-section.scss';
 @use './layout/steps-section.scss';
 @use './layout/footer.scss';
+@use '../src/components/slider/slider.scss';

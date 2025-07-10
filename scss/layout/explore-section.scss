@@ -1,6 +1,6 @@
 @use './../base/typography.scss' as fonts;
 @use './../base/_variables.scss' as style;
-@use './../components/slider/slider.scss' as slider;
+@use './../../src/components/slider/slider.scss' as slider;
 
 .explore-section {
     display: flex;
