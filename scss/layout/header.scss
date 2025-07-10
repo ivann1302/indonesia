@@ -21,11 +21,19 @@
             display: flex;
             flex-direction: row;
     
-            .header__logo-name {
+            a {
+              text-decoration: none;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 0.5rem;
+              
+              .header__logo-name {
                 text-transform: uppercase;
                 color: style.$white;
                 @include fonts.roboto-bold;
-            }   
+            }  
+            } 
         }
     
         .header__navigation {

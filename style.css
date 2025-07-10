@@ -18,6 +18,11 @@ html h1 {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -40,7 +45,14 @@ html h1 {
   display: flex;
   flex-direction: row;
 }
-.header .header__container .header__logo .header__logo-name {
+.header .header__container .header__logo a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header .header__container .header__logo a .header__logo-name {
   text-transform: uppercase;
   color: #FFFFFF;
   font-family: "Roboto", sans-serif;
@@ -415,7 +427,7 @@ body {
 }
 .hero-section .hero-section__main .hero-section__content-container .hero-section__video {
   width: 50%;
-  height: 100%;
+  height: auto;
   position: relative;
   z-index: 2;
 }
@@ -426,16 +438,12 @@ body {
   }
 }
 .hero-section .hero-section__main .hero-section__content-container .hero-section__video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 400px;
   border: none;
 }
 @media (max-width: 768px) {
   .hero-section .hero-section__main .hero-section__content-container .hero-section__video iframe {
-    position: static;
     height: 18rem;
   }
 }
@@ -669,7 +677,7 @@ body {
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  max-width: 1400px;
+  max-width: min(1400px, 100vw - 40px);
   position: relative;
   margin: 0 auto;
 }
