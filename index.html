@@ -2,41 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Исследуйте красоту Индонезии - пляжи, культуру и уникальные места для путешествий">
+    <meta name="keywords" content="Индонезия, путешествия, пляжи, отдых, туризм, экзотика, культура">
+    <!-- Open Graph теги для социальных сетей -->
+    <meta property="og:title" content="Explore Indonesia - Уникальные путешествия">
+    <meta property="og:description" content="Откройте для себя красоту Индонезии с нашими уникальными турами и опытом">
+    <meta property="og:image" content="./src/images/beach.png">
+    <meta property="og:url" content="https://explore-indonesia.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card теги -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Explore Indonesia - Уникальные путешествия">
+    <meta name="twitter:description" content="Откройте для себя красоту Индонезии с нашими уникальными турами и опытом">
+    <meta name="twitter:image" content="./src/images/beach.png">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="./src/images/icons/flower.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Explore Indonesia</title>
+    <title>Explore Indonesia - Уникальные путешествия и отдых</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Explore Indonesia",
+      "url": "https://explore-indonesia.com",
+      "logo": "https://explore-indonesia.com/src/images/icons/flower.svg",
+      "description": "Исследуйте красоту Индонезии - пляжи, культуру и уникальные места для путешествий",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Indonesia"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Туры по Индонезии"
+      }
+    }
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-to-content visually-hidden">Skip to main content</a>
     <header class="header" id="header">
       <div class="header__container">
         <div class="header__logo">
-          <img class="header__logo-icon" src="./src/images/icons/flower.svg" alt="flower">
+          <img class="header__logo-icon" src="./src/images/icons/flower.svg" alt="Логотип Explore Indonesia в виде цветка">
           <div class="header__logo-name">Explore<br>Indonesia</div>
         </div>
         <nav class="header__navigation">
           <div class="header__links">
-            <a class="header__link" href="#destination">destinations</a>
+            <a class="header__link" href="#destination" aria-current="page">destinations</a>
             <a class="header__link" href="#experiences">experiences</a>
             <a class="header__link" href="#about">about</a>
             <a class="header__link" href="#gallery">gallery</a>
           </div>
           <div class="header__buttons">
             <div class="header__buttons__search">
-              <form action="" autocomplete="on">
-                <input id="search"  name="search" type="text" placeholder="What're we looking for?">
-                <input id="search__submit" value="searher" type="submit">
+              <form action="" autocomplete="on" class="header__buttons__search__form">
+                <input id="search" name="search" type="text" placeholder="What're we looking for?">
+                <input id="search__submit" value="search" type="submit" aria-label="Искать">
               </form>
             </div>
             <div class="header__burger-menu">
               <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
               <label class="burger" for="burger-checkbox"></label>
               <ul class="burger-menu__list checked">
-                <li><a href="#" class="burger-menu__item">Destination</a></li>
-                <li><a href="#" class="burger-menu__item">Experiences</a></li>
-                <li><a href="#" class="burger-menu__item">About</a></li>
-                <li><a href="#" class="burger-menu__item">Gallery</a></li>
-                <li><a href="#" class="burger-menu__item">Contact</a></li>
+                <li><a href="#destination" class="burger-menu__item">Destination</a></li>
+                <li><a href="#experiences" class="burger-menu__item">Experiences</a></li>
+                <li><a href="#about" class="burger-menu__item">About</a></li>
+                <li><a href="#gallery" class="burger-menu__item">Gallery</a></li>
+                <li><a href="#footer" class="burger-menu__item">Contact</a></li>
               </ul> 
             </div>             
           </div>
@@ -55,31 +87,36 @@
           <p class="hero-section__calendar-item">Fb In Tw</p>
         </div>
       </aside>
-      
-      <div class="hero-section__main">
+
+      <div id="main-content" class="hero-section__main">
         <div class="hero-section__title">
           <h1 class="hero-section__title-text">Explore<br>Indonesia</h1>
           <button class="hero-section__button">Start travelling</button>
         </div>
-    
+
         <div class="hero-section__content-container">
           <div class="hero-section__content-item">
             <p class="hero-section__content-number">01</p>
-            <h4 class="hero-section__content-title">Title here</h4>
-            <p class="hero-section__content-text">Lorem ipsum dolor sit amet et amet ist ame.</p>
+            <h4 class="hero-section__content-title">Уникальная культура</h4>
+            <p class="hero-section__content-text">Познакомьтесь с богатым культурным наследием Индонезии.</p>
           </div>
           <div class="hero-section__content-item">
             <p class="hero-section__content-number">02</p>
-            <h4 class="hero-section__content-title">Title here</h4>
-            <p class="hero-section__content-text">Lorem ipsum dolor sit amet et amet ist ame.</p>
+            <h4 class="hero-section__content-title">Экзотические пляжи</h4>
+            <p class="hero-section__content-text">Насладитесь белоснежными пляжами и кристально чистой водой.</p>
           </div>
           <div class="hero-section__content-item">
             <p class="hero-section__content-number">03</p>
-            <h4 class="hero-section__content-title">Title here</h4>
-            <p class="hero-section__content-text">Lorem ipsum dolor sit amet et amet ist ame.</p>
+            <h4 class="hero-section__content-title">Природные чудеса</h4>
+            <p class="hero-section__content-text">Исследуйте вулканы, джунгли и уникальную флору и фауну.</p>
           </div>
           <div class="hero-section__video">
-            <iframe width="560" height="400" src="https://www.youtube.com/embed/LCbo_xk30w4?si=6bWpCWNQnP31HIts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="400" src="https://www.youtube.com/embed/LCbo_xk30w4?si=6bWpCWNQnP31HIts" 
+              title="Красота Индонезии: обзор природы и культуры" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <p class="visually-hidden">Видео демонстрирует красивые пейзажи Индонезии, включая пляжи, горы и культурные достопримечательности.</p>
           </div>
         </div>
       </div>
@@ -87,7 +124,7 @@
 
     <section class="destination-section" id="destination">
       <div class="destination-section__block">
-        <img  class="destination-section__image" src="./src/images/row.png" alt="">
+        <img class="destination-section__image" src="./src/images/row.png" alt="Живописные водные пути Индонезии с традиционными лодками">
         <div class="destination-section__content">
           <h3 class="destination-section__block-title">The walkways of Indonesia spellbind</h3>
           <p class="destination-section__block-description">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus. </p>
@@ -96,7 +133,7 @@
       </div>
 
       <div class="destination-section__block destination-section__block--reverse">
-        <img  class="destination-section__image" src="./src/images/beach.png" alt="">
+        <img class="destination-section__image" src="./src/images/beach.png" alt="Тропический пляж Индонезии с белым песком и бирюзовой водой">
         <div class="destination-section__content">
           <h3 class="destination-section__block-title">Perfect beaches exude relaxation and fun</h3>
           <p class="destination-section__block-description">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.</p>
@@ -104,36 +141,36 @@
         </div>
       </div>
     </section>
-    
+
     <section class="explore-section" id="experiences">
       <div class="slider-block">
         <h3 class="slider-block__title">Explore Our Secrets</h3>
         <div class="slider">
           <div class="slider__container">
             <button class="slider__button slider__button--prev">
-              <img  class="slider__arrow" src="./src/images/icons/slider-icons/arrow_4ros9i4im2ni.svg" alt="">
+              <img class="slider__arrow" src="./src/images/icons/slider-icons/arrow_4ros9i4im2ni.svg" alt="Стрелка влево для навигации по слайдеру">
             </button>
             <div class="slider__wrapper">
               <div class="slider__track">
                 <div class="slider__item">
-                  <img class="slider__item__image" src="./src/images/slider-images/slider-image1.png" alt="image 1">
+                  <img class="slider__item__image" src="./src/images/slider-images/slider-image1.png" alt="Традиционная деревня в Индонезии с характерной архитектурой">
                 </div>
                 <div class="slider__item">
-                  <img class="slider__item__image" src="./src/images/slider-images/slider-image2.png" alt="image 2">
+                  <img class="slider__item__image" src="./src/images/slider-images/slider-image2.png" alt="Живописный пейзаж с рисовыми террасами в Индонезии">
                 </div>
                 <div class="slider__item">
-                  <img class="slider__item__image" src="./src/images/slider-images/slider-image3.png" alt="image 3">
+                  <img class="slider__item__image" src="./src/images/slider-images/slider-image3.png" alt="Храмовый комплекс в традиционном индонезийском стиле">
                 </div>
                 <div class="slider__item">
-                  <img class="slider__item__image" src="./src/images/slider-images/slider-image4.png" alt="image 4">
+                  <img class="slider__item__image" src="./src/images/slider-images/slider-image4.png" alt="Тропический пляж с пальмами и лазурной водой">
                 </div>
                 <div class="slider__item">
-                  <img class="slider__item__image" src="./src/images/slider-images/slider-image5.png" alt="image 5">
+                  <img class="slider__item__image" src="./src/images/slider-images/slider-image5.png" alt="Местные жители в традиционных индонезийских костюмах">
                 </div>
               </div>
             </div>
             <button class="slider__button slider__button--next">
-              <img  class="slider__arrow slider__arrow--rotate" src="./src/images/icons/slider-icons/arrow_4ros9i4im2ni.svg" alt="">
+              <img class="slider__arrow slider__arrow--rotate" src="./src/images/icons/slider-icons/arrow_4ros9i4im2ni.svg" alt="Стрелка вправо для навигации по слайдеру">
             </button>
           </div>
             <div class="slider__dots">
@@ -195,41 +232,44 @@
         <div class="video-section__title-block">
           <h3 class="video-section__title">Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h3>
           <div class="video-section__main-video">
-            <iframe  class="main-video__iframe" src="https://www.youtube.com/embed/bUS20ZTHs5E?si=uNOMXGR-SC_e5NwX" 
-              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            <iframe class="main-video__iframe" src="https://www.youtube.com/embed/bUS20ZTHs5E?si=uNOMXGR-SC_e5NwX" 
+              title="Видео о жизни в Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
+            <p class="visually-hidden">Видео рассказывает о повседневной жизни в Индонезии, показывая местную культуру, традиции и образ жизни.</p>
           </div>
         </div>
           <div class="video-section__bottom">
             <div class="video-section__bottom-block">
               <div class="video-section__bottom-video-container">
                 <iframe src="https://www.youtube.com/embed/5v6u_U6QRQA?si=rj_nmIL3DqPP09Kp" 
-                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  title="Жизнь в сельской местности Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
+                <p class="visually-hidden">Видео показывает сельскую жизнь в Индонезии, включая традиционные деревни, сельское хозяйство и природные ландшафты.</p>
               </div>
               <div class="video-section__bottom-description">
                 <h6 class="video-section__bottom-title">In The Country</h6>
-                <p class="video-section__bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.</p>
+                <p class="video-section__bottom-text">Познакомьтесь с аутентичной сельской жизнью Индонезии, традициями и красотой природы вдали от городской суеты.</p>
               </div>
             </div>
             <div class="video-section__bottom-block">
               <div class="video-section__bottom-video-container">
                 <iframe src="https://www.youtube.com/embed/RUcdo617_Co?si=qkLf2sQ8GObqG3XD" 
-                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  title="Городская жизнь в Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
+                <p class="visually-hidden">Видео демонстрирует городскую жизнь в Индонезии, включая современные города, архитектуру и городскую культуру.</p>
               </div>
               <div class="video-section__bottom-description">
                 <h6 class="video-section__bottom-title">In The City</h6>
-                <p class="video-section__bottom-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.</p>
+                <p class="video-section__bottom-text">Исследуйте динамичную городскую жизнь Индонезии с её современной архитектурой, оживлёнными улицами и культурным разнообразием.</p>
               </div>
             </div>
           </div>
       </div>
     </section>   
-    
+
     <section class="steps__section">
       <div class="steps__container">
         <h3 class="steps__title">Getting Here</h3>
@@ -286,15 +326,15 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-container">
         <button class="footer__up-button">
           <a href="#header" id="back-to-top">
-            <img src="./src/images/icons/footer-icons/upArrow.svg" alt="">
+            <img src="./src/images/icons/footer-icons/upArrow.svg" alt="Стрелка вверх для возврата к началу страницы">
           </a>
         </button>
         <div class="footer__logo">
-          <img class="footer__logo-image" src="./src/images/icons/flower.svg" alt="logo">
+          <img class="footer__logo-image" src="./src/images/icons/flower.svg" alt="Логотип Explore Indonesia в виде цветка">
           <div class="footer__title">
             <h3 class="footer__text-title">
               <span class="footer__text-highlight">Explore</span><br>Indonesia
@@ -313,18 +353,18 @@
           <div class="footer__contacts">
             <ul class="footer__contacts-list">
               <li class="footer__contacts-item">
-                <button class="footer__contacts-button footer__contacts-button--facebook">
-                  <img src="./src/images/icons/footer-icons/facebook.svg" alt="Facebook">
+                <button class="footer__contacts-button footer__contacts-button--facebook" aria-label="Посетите нашу страницу в Facebook">
+                  <img src="./src/images/icons/footer-icons/facebook.svg" alt="Иконка Facebook">
                 </button>
               </li>
               <li class="footer__contacts-item">
-                <button class="footer__contacts-button footer__contacts-button--linkedIn">
-                  <img src="./src/images/icons/footer-icons/linkedin.svg" alt="LinkedIn">
+                <button class="footer__contacts-button footer__contacts-button--linkedIn" aria-label="Посетите нашу страницу в LinkedIn">
+                  <img src="./src/images/icons/footer-icons/linkedin.svg" alt="Иконка LinkedIn">
                 </button>
               </li>
               <li class="footer__contacts-item">
-                <button class="footer__contacts-button footer__contacts-button--google">
-                  <img src="./src/images/icons/footer-icons/google.svg" alt="Google">
+                <button class="footer__contacts-button footer__contacts-button--google" aria-label="Посетите нашу страницу в Google">
+                  <img src="./src/images/icons/footer-icons/google.svg" alt="Иконка Google">
                 </button>
               </li>
             </ul>

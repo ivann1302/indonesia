@@ -8,7 +8,6 @@
     background-color: style.$dark-blue;
     @include fonts.dm-normal;
     color: style.$white;
-    max-width: 1920px;
     height: 136px;
 
     @media (max-width: 768px) {

@@ -20,27 +20,27 @@
         .header__logo {
             display: flex;
             flex-direction: row;
-    
+
             .header__logo-name {
                 text-transform: uppercase;
                 color: style.$white;
                 @include fonts.roboto-bold;
             }   
         }
-    
+
         .header__navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1500px;
         width: 100%;
-    
+
             .header__links {
                 display: flex;
                 justify-content: space-between;
                 gap: 3.875rem;
                 margin-left: 3.5rem;
-                
+
                 a {
                     text-decoration: none;
                     text-transform: uppercase;
@@ -54,7 +54,7 @@
                     }
                 }
             }
-    
+
             .header__buttons {
                 display: flex;
                 flex-direction: row;
@@ -65,8 +65,8 @@
                 display: inline-block;
                 position: relative;
                 float: right;
-                padding: 0;    
-                
+                padding: 0;
+
 
                 input[type="text"] {
                     height: 2.2rem;
@@ -128,7 +128,7 @@
                 position: absolute;
                 visibility: hidden;
               }
-              
+
               .burger {
                 z-index: 3;
                 cursor: pointer;
@@ -139,7 +139,7 @@
                 width: 40px;
                 height: 26px;
               }
-              
+
               .burger::before,
               .burger::after {
                 content: '';
@@ -153,31 +153,31 @@
                 opacity: 0.8;
                 transition: all 0.3s;
               }
-              
+
               .burger::before {
                 top: 0;
                 box-shadow: 0 11px 0 style.$white;
                 transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
               }
-              
+
               .burger::after {
                 bottom: 0;
                 transition: bottom .3s .15s, transform .3s;
               }
-              
+
               .burger-checkbox:checked + .burger::before {
                 top: 11px;
                 transform: rotate(45deg);
                 box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
                 transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
               }
-              
+
               .burger-checkbox:checked + .burger::after {
                 bottom: 11px;
                 transform: rotate(-45deg);
                 transition: bottom 0.3s, transform 0.3s 0.15s;
               }
-              
+
               .burger-menu__list {
                 position: absolute;
                 top: 3.7rem;
@@ -191,7 +191,7 @@
                 transform: translateX(-100%);
                 transition: .3s;
                 width: 11rem;
-              
+
                 @media (max-width: 768px) {
                   z-index: 2;
                   top: -1rem;
@@ -200,14 +200,14 @@
                   color: style.$white;
                   opacity: 1;
                 }
-              
+
                 // Использование :checked для отображения меню
                 .burger-checkbox:checked ~ & {
                   transform: translateX(0);
                   display: none;
                 }
               }
-              
+
               .burger-menu__item {
                 display: block;
                 padding: 0.5rem;
@@ -215,7 +215,7 @@
                 font-size: 1rem;
                 text-align: center;
                 text-decoration: none;
-              
+
                 &:hover {
                   background-color: rgba(255, 255, 255, 0.2);
                 }
@@ -235,6 +235,16 @@
                 .header__links {
                     display: none;
                     margin-left: 0;
+                }
+
+                .header__buttons {
+                    .header__buttons__search {
+                        display: none;
+
+                        .header__buttons__search__form {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
