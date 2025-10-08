@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   try {
+    // Проверяем, что мы на десктопе (ширина экрана больше 768px)
+    if (window.innerWidth <= 768) {
+      console.log('Slider: Мобильная версия - слайдер отключен');
+      return;
+    }
+
     const sliderTrack = document.querySelector('.slider__track');
     const sliderItems = Array.from(document.querySelectorAll('.slider__item'));
     const prevButton = document.querySelector('.slider__button--prev');
