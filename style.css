@@ -508,7 +508,6 @@ body {
 .destination-section .destination-section__block .destination-section__image {
   z-index: 0;
   overflow: hidden;
-  transition: transform 0.4s ease;
   opacity: 0;
   transform: translateX(100px);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -518,7 +517,8 @@ body {
   transform: translateX(0);
 }
 .destination-section .destination-section__block .destination-section__image:hover {
-  transform: scale(1.07);
+  transform: scale(1.07) !important;
+  transition: transform 0.4s ease !important;
 }
 @media (max-width: 768px) {
   .destination-section .destination-section__block .destination-section__image {
@@ -612,6 +612,10 @@ body {
 }
 .destination-section .destination-section__block--reverse .destination-section__image.animate {
   transform: translateX(0);
+}
+.destination-section .destination-section__block--reverse .destination-section__image:hover {
+  transform: scale(1.07) !important;
+  transition: transform 0.4s ease !important;
 }
 @media (max-width: 768px) {
   .destination-section .destination-section__block--reverse {
