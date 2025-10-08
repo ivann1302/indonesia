@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliderItems = Array.from(document.querySelectorAll('.slider__item'));
     const prevButton = document.querySelector('.slider__button--prev');
     const nextButton = document.querySelector('.slider__button--next');
-    const dots = document.querySelectorAll('.slider__dot');
+    const dots = Array.from(document.querySelectorAll('.slider__dot'));
 
     // Проверяем наличие всех необходимых элементов
     if (!sliderTrack || !sliderItems.length || !prevButton || !nextButton || !dots.length) {
@@ -13,58 +13,59 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     let currentIndex = 0;
-    const itemWidth = 405; // ширина активного слайда
-    const smallItemWidth = 350; // ширина неактивных
-    const gap = 31;
     let isAnimating = false;
+    const totalSlides = sliderItems.length;
 
-    function calculateOffset() {
-      try {
-        const wrapper = document.querySelector('.slider__wrapper');
-        if (!wrapper) {
-          console.warn('Slider: Элемент .slider__wrapper не найден');
-          return 0;
-        }
-        
-        const wrapperWidth = wrapper.offsetWidth;
-
-        let offset = 0;
-        for (let i = 0; i < currentIndex; i++) {
-          offset += smallItemWidth + gap;
-        }
-
-        const center = (wrapperWidth - itemWidth) / 2;
-        return -offset + center;
-      } catch (error) {
-        console.error('Slider: Ошибка при расчете смещения:', error);
-        return 0;
-      }
+    // Инициализация слайдера
+    function initSlider() {
+      updateSlider();
     }
 
+    // Обновление отображения слайдера
     function updateSlider() {
       if (isAnimating) return;
       
       try {
         isAnimating = true;
 
-        const total = sliderItems.length;
-        const prevIndex = (currentIndex - 1 + total) % total;
-        const nextIndex = (currentIndex + 1) % total;
-
+        // Убираем все классы активности
         sliderItems.forEach((item) => {
-          item.classList.remove('prev', 'active', 'next');
+          item.classList.remove('active');
         });
 
-        sliderItems[prevIndex].classList.add('prev');
-        sliderItems[currentIndex].classList.add('active');
-        sliderItems[nextIndex].classList.add('next');
+        // Рассчитываем индексы для кругового отображения
+        const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        const nextIndex = (currentIndex + 1) % totalSlides;
 
-        const offset = calculateOffset();
-        sliderTrack.style.transform = `translateX(${offset}px)`;
+        // Скрываем все слайды
+        sliderItems.forEach((item) => {
+          item.style.display = 'none';
+        });
 
+        // Создаем виртуальную структуру: [prev, active, next]
+        // Активный слайд ВСЕГДА в позиции 1 (по центру)
+        const virtualSlides = [prevIndex, currentIndex, nextIndex];
+        
+        // Показываем слайды в правильном порядке
+        virtualSlides.forEach((slideIndex, position) => {
+          const slide = sliderItems[slideIndex];
+          slide.style.display = 'block';
+          slide.style.order = position;
+          
+          // Активный слайд всегда в позиции 1 (центр)
+          if (position === 1) {
+            slide.classList.add('active');
+          }
+        });
+
+        // Обновляем точки навигации
         dots.forEach((dot, index) => {
-          dot.classList.toggle('slider__dot--active', index === currentIndex);
+          const isActive = index === currentIndex;
+          dot.classList.toggle('slider__dot--active', isActive);
         });
+
+        // Центрируем активный слайд
+        centerActiveSlide();
 
         setTimeout(() => {
           isAnimating = false;
@@ -75,54 +76,88 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    // Центрирование активного слайда
+    function centerActiveSlide() {
+      const wrapper = document.querySelector('.slider__wrapper');
+      if (!wrapper) return;
+      
+      const wrapperWidth = wrapper.offsetWidth;
+      const activeWidth = 320; // Ширина активного слайда
+      const sideWidth = 280; // Ширина боковых слайдов
+      const gap = 20; // Отступ между слайдами
+      
+      // Активный слайд всегда в позиции 1 (центр виртуальной структуры)
+      // Рассчитываем смещение так, чтобы активный слайд был строго по центру экрана
+      const activePosition = sideWidth + gap; // Позиция активного слайда в группе [prev, active, next]
+      const screenCenter = wrapperWidth / 2;
+      const activeCenter = activePosition + (activeWidth / 2);
+      
+      // Смещаем трек так, чтобы центр активного слайда совпал с центром экрана
+      const offset = screenCenter - activeCenter;
+      sliderTrack.style.transform = `translateX(${offset}px)`;
+    }
+
+    // Переход к следующему слайду
     function goToNext() {
-      try {
-        currentIndex = (currentIndex + 1) % sliderItems.length;
+      if (!isAnimating) {
+        currentIndex = (currentIndex + 1) % totalSlides;
         updateSlider();
-      } catch (error) {
-        console.error('Slider: Ошибка при переходе к следующему слайду:', error);
       }
     }
 
+    // Переход к предыдущему слайду
     function goToPrev() {
-      try {
-        currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+      if (!isAnimating) {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
         updateSlider();
-      } catch (error) {
-        console.error('Slider: Ошибка при переходе к предыдущему слайду:', error);
       }
     }
 
-    // Добавляем обработчики событий с проверкой ошибок
+    // Переход к конкретному слайду
+    function goToSlide(index) {
+      if (index !== currentIndex && !isAnimating && index >= 0 && index < totalSlides) {
+        currentIndex = index;
+        updateSlider();
+      }
+    }
+
+    // Обработчики событий
     nextButton.addEventListener('click', goToNext);
     prevButton.addEventListener('click', goToPrev);
 
+    // Обработчики для точек навигации
     dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        try {
-          if (index !== currentIndex && !isAnimating) {
-            currentIndex = index;
-            updateSlider();
-          }
-        } catch (error) {
-          console.error('Slider: Ошибка при клике на точку:', error);
-        }
-      });
+      dot.addEventListener('click', () => goToSlide(index));
     });
 
-    // Инициализация слайдера
-    updateSlider();
-    
-    // Обработчик изменения размера окна с debounce
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        updateSlider();
-      }, 150);
+    // Клавиатурная навигация
+    document.addEventListener('keydown', function(e) {
+      if (isAnimating) return;
+      
+      switch(e.key) {
+        case 'ArrowLeft':
+          e.preventDefault();
+          goToPrev();
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          goToNext();
+          break;
+        case 'Home':
+          e.preventDefault();
+          goToSlide(0);
+          break;
+        case 'End':
+          e.preventDefault();
+          goToSlide(totalSlides - 1);
+          break;
+      }
     });
+
+    // Инициализируем слайдер
+    initSlider();
 
   } catch (error) {
-    console.error('Slider: Критическая ошибка при инициализации:', error);
+    console.error('Slider: Критическая ошибка инициализации:', error);
   }
-}); 
+});
