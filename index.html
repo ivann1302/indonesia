@@ -39,12 +39,13 @@
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-to-content visually-hidden">Skip to main content</a>
     <header class="header" id="header">
       <div class="header__container">
         <div class="header__logo">
-          <img class="header__logo-icon" src="./src/images/icons/flower.svg" alt="Логотип Explore Indonesia в виде цветка">
-          <div class="header__logo-name">Explore<br>Indonesia</div>
+          <a href="#header">
+            <img class="header__logo-icon" src="./src/images/icons/flower.svg" alt="Логотип Explore Indonesia в виде цветка">
+            <div class="header__logo-name">Explore<br>Indonesia</div>
+          </a>
         </div>
         <nav class="header__navigation">
           <div class="header__links">
@@ -64,11 +65,11 @@
               <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
               <label class="burger" for="burger-checkbox"></label>
               <ul class="burger-menu__list checked">
-                <li><a href="#destination" class="burger-menu__item">Destination</a></li>
-                <li><a href="#experiences" class="burger-menu__item">Experiences</a></li>
-                <li><a href="#about" class="burger-menu__item">About</a></li>
-                <li><a href="#gallery" class="burger-menu__item">Gallery</a></li>
-                <li><a href="#footer" class="burger-menu__item">Contact</a></li>
+                <li><a href="#" class="burger-menu__item">Destination</a></li>
+                <li><a href="#" class="burger-menu__item">Experiences</a></li>
+                <li><a href="#" class="burger-menu__item">About</a></li>
+                <li><a href="#" class="burger-menu__item">Gallery</a></li>
+                <li><a href="#" class="burger-menu__item">Contact</a></li>
               </ul> 
             </div>             
           </div>
@@ -111,9 +112,9 @@
             <p class="hero-section__content-text">Исследуйте вулканы, джунгли и уникальную флору и фауну.</p>
           </div>
           <div class="hero-section__video">
-            <iframe width="560" height="400" src="https://www.youtube.com/embed/LCbo_xk30w4?si=6bWpCWNQnP31HIts" 
-              title="Красота Индонезии: обзор природы и культуры" frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            <iframe width="560" height="400" src="https://www.youtube.com/embed/LCbo_xk30w4?si=6bWpCWNQnP31HIts"
+              title="Красота Индонезии: обзор природы и культуры" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
             <p class="visually-hidden">Видео демонстрирует красивые пейзажи Индонезии, включая пляжи, горы и культурные достопримечательности.</p>
@@ -122,7 +123,7 @@
       </div>
     </section>
 
-    <section class="destination-section" id="destination">
+    <section class="destination-section">
       <div class="destination-section__block">
         <img class="destination-section__image" src="./src/images/row.png" alt="Живописные водные пути Индонезии с традиционными лодками">
         <div class="destination-section__content">
@@ -142,7 +143,7 @@
       </div>
     </section>
 
-    <section class="explore-section" id="experiences">
+    <section class="explore-section">
       <div class="slider-block">
         <h3 class="slider-block__title">Explore Our Secrets</h3>
         <div class="slider">
@@ -174,7 +175,6 @@
             </button>
           </div>
             <div class="slider__dots">
-              <span class="slider__dot slider__dot--active"></span>
               <span class="slider__dot"></span>
               <span class="slider__dot"></span>
               <span class="slider__dot"></span>
@@ -206,7 +206,7 @@
       </div>
     </section>
 
-    <section class="photo-section" id="gallery">
+    <section class="photo-section">
       <div class="photo-section__container">
         <h3 class="photo-title">Photo Gallery</h3>
         <p class="photo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.</p>
@@ -227,13 +227,13 @@
       </div>
     </section>
 
-    <section class="video-section" id="about">
+    <section class="video-section">
       <div class="video-section__container">
         <div class="video-section__title-block">
           <h3 class="video-section__title">Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.</h3>
           <div class="video-section__main-video">
-            <iframe class="main-video__iframe" src="https://www.youtube.com/embed/bUS20ZTHs5E?si=uNOMXGR-SC_e5NwX" 
-              title="Видео о жизни в Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            <iframe class="main-video__iframe" src="https://www.youtube.com/embed/bUS20ZTHs5E?si=uNOMXGR-SC_e5NwX"
+              title="Видео о жизни в Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
             <p class="visually-hidden">Видео рассказывает о повседневной жизни в Индонезии, показывая местную культуру, традиции и образ жизни.</p>
@@ -243,7 +243,7 @@
             <div class="video-section__bottom-block">
               <div class="video-section__bottom-video-container">
                 <iframe src="https://www.youtube.com/embed/5v6u_U6QRQA?si=rj_nmIL3DqPP09Kp" 
-                  title="Жизнь в сельской местности Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  title="Жизнь в сельской местности Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
                 <p class="visually-hidden">Видео показывает сельскую жизнь в Индонезии, включая традиционные деревни, сельское хозяйство и природные ландшафты.</p>
@@ -256,7 +256,7 @@
             <div class="video-section__bottom-block">
               <div class="video-section__bottom-video-container">
                 <iframe src="https://www.youtube.com/embed/RUcdo617_Co?si=qkLf2sQ8GObqG3XD" 
-                  title="Городская жизнь в Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  title="Городская жизнь в Индонезии" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
                 <p class="visually-hidden">Видео демонстрирует городскую жизнь в Индонезии, включая современные города, архитектуру и городскую культуру.</p>
@@ -326,7 +326,7 @@
       </div>
     </section>
 
-    <footer class="footer" id="footer">
+    <footer class="footer">
       <div class="footer-container">
         <button class="footer__up-button">
           <a href="#header" id="back-to-top">
