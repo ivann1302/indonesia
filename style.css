@@ -250,7 +250,7 @@ body {
   height: max-content;
   display: flex;
   justify-content: center;
-  background-image: url("./../../src/images/diego-gutierrez.png");
+  background-image: url("/images/diego-gutierrez.png");
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 226px;
@@ -472,7 +472,7 @@ body {
   justify-content: space-around;
   gap: 11rem;
   padding: 11rem 0 11rem 0;
-  background-image: url("./../../src/images/beach.png");
+  background-image: url("/images/beach.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1141,7 +1141,7 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url(./../../src/images/hugo-matilla-EFuCATqfblI-unsplash1.png);
+  background-image: url("/images/hugo-matilla-EFuCATqfblI-unsplash1.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
